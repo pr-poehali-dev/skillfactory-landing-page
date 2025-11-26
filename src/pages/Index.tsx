@@ -6,6 +6,7 @@ import Icon from "@/components/ui/icon";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import FlaskModel from "@/components/FlaskModel";
 
 const Index = () => {
   const scrollToSection = (id: string) => {
@@ -68,12 +69,8 @@ const Index = () => {
               </div>
             </div>
             <div className="relative animate-scale-in">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center border-2 border-dashed border-primary/30">
-                <div className="text-center p-8">
-                  <Icon name="Box" size={80} className="text-primary/40 mx-auto mb-4" />
-                  <p className="text-primary/60 font-semibold text-lg">Место для 3D модели</p>
-                  <p className="text-muted-foreground text-sm mt-2">Здесь будет интерактивная 3D визуализация</p>
-                </div>
+              <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
+                <FlaskModel />
               </div>
             </div>
           </div>
