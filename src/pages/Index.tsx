@@ -443,13 +443,17 @@ const Index = () => {
             <div>
               <h4 className="font-bold mb-4">Соцсети</h4>
               <div className="flex gap-3">
-                <a href="#" className="w-10 h-10 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
-                  <Icon name="Facebook" size={20} />
+                <a href="#" className="w-10 h-10 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors" aria-label="VK">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14c5.6 0 6.93-1.33 6.93-6.93V8.93C22 3.33 20.67 2 15.07 2zm3.45 14.93c-.33.55-1.14 1.07-2.21 1.07-1.01 0-1.84-.42-2.45-.93-.48-.41-.87-.88-1.21-1.31-.29-.37-.54-.68-.81-.97-.31-.33-.64-.5-1.01-.5-.17 0-.34.04-.52.13-.45.22-.81.74-1.12 1.64-.22.65-.66 1.2-1.31 1.62-.53.35-1.14.53-1.82.53-1.93 0-3.35-1.24-4.2-3.67-.68-1.94-.87-4.16-.55-6.61.19-1.42.94-2.54 2.11-3.15.63-.33 1.35-.5 2.12-.5 1.82 0 3.12.93 3.86 2.76.31.76.46 1.58.46 2.44 0 .48-.05.96-.14 1.44.55-.16 1.05-.46 1.47-.87.59-.57 1.02-1.29 1.28-2.14.19-.62.64-1.09 1.24-1.32.26-.1.53-.15.81-.15.91 0 1.67.47 2.11 1.28.31.58.47 1.24.47 1.96 0 1.12-.28 2.15-.83 3.05-.36.59-.84 1.08-1.41 1.45.65.15 1.23.46 1.7.91.69.66 1.04 1.55 1.04 2.64 0 .59-.12 1.15-.35 1.66z"/>
+                  </svg>
                 </a>
-                <a href="#" className="w-10 h-10 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
-                  <Icon name="Twitter" size={20} />
+                <a href="#" className="w-10 h-10 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors" aria-label="Telegram">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.67-.52.36-.99.53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.24.37-.48.98-.73 3.85-1.68 6.43-2.79 7.73-3.34 3.68-1.52 4.44-1.78 4.94-1.79.11 0 .35.03.51.17.13.11.17.26.19.37.01.08.03.28.01.44z"/>
+                  </svg>
                 </a>
-                <a href="#" className="w-10 h-10 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
+                <a href="#" className="w-10 h-10 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors" aria-label="Instagram">
                   <Icon name="Instagram" size={20} />
                 </a>
               </div>
