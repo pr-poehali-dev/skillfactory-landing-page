@@ -1,10 +1,9 @@
-import { useRef } from 'react';
+import { useRef, Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, PerspectiveCamera, Environment } from '@react-three/drei';
-import * as THREE from 'three';
+import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
 
 function Flask() {
-  const groupRef = useRef<THREE.Group>(null);
+  const groupRef = useRef<any>(null);
 
   useFrame(() => {
     if (groupRef.current) {
@@ -64,20 +63,21 @@ function Flask() {
 export default function FlaskModel() {
   return (
     <div className="w-full h-full">
-      <Canvas shadows>
-        <PerspectiveCamera makeDefault position={[0, 1, 5]} />
-        <ambientLight intensity={0.5} />
-        <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} castShadow />
-        <pointLight position={[-10, -10, -10]} intensity={0.5} />
-        <Flask />
-        <Environment preset="city" />
-        <OrbitControls 
-          enableZoom={false} 
-          autoRotate={false}
-          minPolarAngle={Math.PI / 3}
-          maxPolarAngle={Math.PI / 1.5}
-        />
-      </Canvas>
+      <Suspense fallback={null}>
+        <Canvas shadows>
+          <PerspectiveCamera makeDefault position={[0, 1, 5]} />
+          <ambientLight intensity={0.5} />
+          <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} castShadow />
+          <pointLight position={[-10, -10, -10]} intensity={0.5} />
+          <Flask />
+          <OrbitControls 
+            enableZoom={false} 
+            autoRotate={false}
+            minPolarAngle={Math.PI / 3}
+            maxPolarAngle={Math.PI / 1.5}
+          />
+        </Canvas>
+      </Suspense>
     </div>
   );
 }
